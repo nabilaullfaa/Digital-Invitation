@@ -1,0 +1,167 @@
+:root {
+    --primary-color: #718355;
+    --secondary-bg: #cfe1b9;
+    --text-color: #000;
+    --font-briden: 'BridenGroom', serif;
+    --font-common: 'commonText', sans-serif;
+}
+
+@font-face {
+    font-family: 'BridenGroom';
+    src: url(font/BrittanySignature.ttf);
+}
+
+@font-face {
+    font-family: 'commonText';
+    src: url(font/CaviarDreams.ttf);
+}
+
+body {
+    font-family: var(--font-common);
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: rgba(196, 213, 175, 0.374);
+    margin: 0 auto; /* Pusatkan konten secara horizontal */
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 375px; /* Maksimal lebar halaman adalah 375px (ukuran layar ponsel) */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+}
+
+.image-section {
+    position: relative;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    max-width: 100%; /* Pastikan elemen tidak melampaui lebar ponsel */
+}
+
+.landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#landing-page::before {
+    background-image: url('bg/1.jpg');
+}
+
+#invitation::before {
+    background-image: url('bg/2.jpg');
+}
+
+#save-date::before {
+    background-image: url('bg/3.jpg');
+}
+
+#guests::before {
+    background-image: url('bg/4.jpg');
+}
+
+#wedding-wish::before {
+    background-image: url('bg/5.jpg');
+}
+
+.rounded-box {
+    display: flex;
+    flex-direction: row; /* Tampilkan kolom secara horizontal (kiri-kanan) */
+    justify-content: space-between; /* Spasi antara kolom */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Sesuaikan dengan lebar ponsel */
+    margin: 0 auto; /* Pusatkan secara keseluruhan */
+}
+
+.rounded-box .column {
+    text-align: center;
+    margin: 0.5rem 0; /* Spasi antar kolom */
+    flex: 1; /* Agar kolom memiliki lebar yang sama */
+}
+
+.rounded-box .column h4 {
+    font-family: var(--font-briden);
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Divider line between columns */
+.rounded-box .column:nth-child(1) {
+    border-right: 2px solid #ccc; /* Garis vertikal di antara kolom */
+    padding-right: 1rem; /* Spasi antara kolom dan garis */
+}
+
+.btn-success {
+    background-color: var(--primary-color);
+    border: none;
+    width: 100%; /* Tombol lebar penuh pada layar ponsel */
+    max-width: 300px; /* Maksimal lebar tombol */
+    margin: 0 auto; /* Pusatkan tombol */
+}
+
+.btn-success:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Responsive Text */
+h1, p {
+    margin: 0.5rem 0;
+    word-wrap: break-word; /* Supaya teks panjang tidak melebihi lebar layar */
+    max-width: 100%;
+}
+
+/* Gambar Responsif */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Pusatkan gambar */
+}
+
+/* Countdown Responsif */
+.simply-countdown {
+    font-size: 1rem; /* Sesuaikan ukuran countdown */
+    margin: 0rem 0;
+    display: flex; /* Gunakan Flexbox untuk elemen sebaris */
+    justify-content: center; /* Pusatkan countdown secara horizontal */
+    align-items: center; /* Pusatkan countdown secara vertikal */
+}
+
+.simply-countdown .simply-event {
+    font-size: 1.5rem; /* Example change */
+}
+
+
+.simply-countdown .simply-event span {
+    margin: 0 0.2rem; /* Spasi antar angka */
+}
+
+.simply-countdown .simply-event .simply-event-label {
+    font-size: 0.7rem; /* Ukuran teks untuk label */
+    font-style: italic; /* Gaya font untuk label */
+    margin-top: 0.2rem; /* Spasi antara angka dan label */
+}

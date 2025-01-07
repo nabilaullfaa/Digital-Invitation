@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blouvie Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- countdown -->
+    <link rel="stylesheet" href="countdown/default.css">
+    <script src="countdown/simplyCountdown.umd.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <section id="landing-page" class="landing-page w-100 h-100 p-3 mx-auto text-center d-flex 
+        justify-content-center align-items-center text-black">
+        <main>
+            <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
+            <h1>Guntur & Radina</h1>
+            <p>Akan melangsungkan pernikahan dalam:</p>
+            <div class="my-countdown simply-countdown"></div>
+            <a href="#undangan" class="btn btn-lg mt-4">Lihat Undangan</a>
+        </main>
+    </section>
+
+    <section id="home" class="home">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2>Acara pernikahan</h2>
+                    <h3>Diselenggarakan pada 18 Januari 2025 di Praya, Lombok Tengah</h3>
+                    <p>Oleh karena itu, dengan segala hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami</p>
+                    <h1>Guntur Andi Supian</h1>
+                    <p style="margin-top: 0rem;">Putra kedua dari :</p>
+                    <p style="margin-top: 0rem;">Alm Bapak Ruslam & Ibu Bese</p>
+                    <h1>&</h1>
+                    <h1>Radina Hanifah</h1>
+                    <p>Putra Ketiga dari :</p>
+                    <p>Bapak Edi Wahyudi & Ibu Hakimah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // This will init all countdowns with the same options, but different themes
+        simplyCountdown('.my-countdown', {
+            year: 2025, // Target year (required)
+            month: 1, // Target month [1-12] (required)
+            day: 18, // Target day [1-31] (required)
+            hours: 8, // Target hour [0-23], default: 0
+            minutes: 0, // Target minute [0-59], default: 0
+            seconds: 0, // Target second [0-59], default: 0
+            words: { // Custom labels, with lambda for plurals
+                days: { root: 'hari', lambda: (root, n) => n > 1 ? root + '' : root },
+                hours: { root: 'jam', lambda: (root, n) => n > 1 ? root + '' : root },
+                minutes: { root: 'menit', lambda: (root, n) => n > 1 ? root + '' : root },
+                seconds: { root: 'detik', lambda: (root, n) => n > 1 ? root + '' : root }
+            },
+            
+            refresh: 1000, // Refresh interval in ms, default: 1000
+            sectionClass: 'simply-section', // CSS class for each countdown section
+            amountClass: 'simply-amount', // CSS class for numeric values
+            wordClass: 'simply-word', // CSS class for unit labels
+            zeroPad: false, // Pad numbers with leading zero
+            removeZeroUnits: false, // Remove units with zero value
+            countUp: false, // Count up after reaching zero
+            onEnd: () => {}, // Callback when countdown ends
+            onStop: () => {}, // Callback when countdown is stopped
+            onResume: () => {}, // Callback when countdown is resumed
+            onUpdate: (params) => {} // Callback when countdown is updated
+        });
+        </script>
+  </body>
+</html>
