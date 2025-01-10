@@ -165,3 +165,11 @@ img {
     font-style: italic; /* Gaya font untuk label */
     margin-top: 0.2rem; /* Spasi antara angka dan label */
 }
+
+.swal2-confirm {
+    background-color: #718355 !important; /* Ganti warna tombol (Hijau) */
+    color: white !important; /* Warna teks putih */
+    border-radius: 8px !important; /* Membuat tombol lebih rounded */
+    padding: 10px 20px !important; /* Sesuaikan ukuran */
+    font-size: 16px !important;
+}
