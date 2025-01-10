@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="countdown/default.css">
     <script src="countdown/simplyCountdown.umd.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
         /* Disable scrolling until 'Lihat Undangan' is clicked */
@@ -87,7 +88,7 @@
             <h1 class="mt-5 fade-up" style="font-family: 'BridenGroom';">Wedding Gift</h1>
             <p class="fade-up" style="font-size: 0.9rem;">Doa restu anda merupakan karunia yang sangat berarti bagi kami. Jika memberi adalah ungkapan tanda kasih, anda dapat memberi kado secara cashless.</p>
             <img src="img/seabank.png" alt="Seabank Logo" class="img-fluid mx-auto d-block fade-up" style="max-width: 13rem; margin-top: -2rem;">
-            <a href="#" class="btn btn-success fade-up" style="margin-top: -2rem;">Kirim Hadiah</a>
+            <button id="copy-rekening-btn" class="btn btn-success fade-up">Copy Nomor Rekening</button>
             <br><br><br>
         </main>
     </section>
@@ -185,6 +186,36 @@
         const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
         const namaContainer = document.querySelector('#landing-page p span');
         namaContainer.innerText = `${pronoun} ${nama}`;
+
+        function copyRekening() {
+        const rekening = "1234567890"; // Ganti dengan nomor rekening yang benar
+        const tempInput = document.createElement("input");
+        tempInput.value = rekening;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        // SweetAlert2 - Notifikasi setelah berhasil menyalin
+        Swal.fire({
+        title: "Berhasil Disalin!",
+        text: `Nomor Rekening: ${rekening}`,
+        icon: "success",
+        confirmButtonText: "OK",
+        timer: 3000, // Alert akan otomatis hilang setelah 3 detik
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+            });
+        }
+
+        // Tambahkan event listener ke tombol
+        document.getElementById("copy-rekening-btn").addEventListener("click", copyRekening);
+
+
     </script>
 
 </body>
