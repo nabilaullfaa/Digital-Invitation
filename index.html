@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blouvie Digital</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="countdown/default.css">
+    <script src="countdown/simplyCountdown.umd.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        /* Disable scrolling until 'Lihat Undangan' is clicked */
+        body.locked {
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Animasi dari bawah */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="locked">
+
+    <audio id="song" preload="auto">
+        <source src="audio/music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <section id="landing-page" class="image-section" style="min-height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
+        <main>
+            <h4 class="fade-up" style="font-family: 'CommonText';">The Wedding Of</h4>
+            <h1 class="fade-up" style="font-family: 'BridenGroom'; margin-top: 2rem; font-size: 4rem;">Guntur & Radina</h1>
+            <p class="fade-up" style="font-family: 'CommonText'; margin-top: 2rem;">Dear</p>
+            <p class="fade-up" style="font-family: 'CommonText';"><span>Bapak/Ibu/Saudara</span></p>
+            <a href="#invitation" class="btn btn-success mt-4 fade-up" id="view-invitation-btn">Lihat Undangan</a>
+        </main>
+    </section>
+
+    <!-- Section: Invitation -->
+    <section id="invitation" class="image-section">
+        <main class="text-center container">
+            <img src="img/flower 1.png" alt="Flower" class="img-fluid mx-auto d-block mb-4 fade-up" style="max-width: 10rem;">
+            <p class="fade-up" style="margin-top: -25%; font-size: 0.8rem;">Assalamualaikum Warahmatullahi Wabarakatuh</p>
+            <p class="fade-up" style="font-size: 0.8rem;" >Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami:</p>
+            <h1 class="fade-up" style="font-family: 'BridenGroom'; font-size: 2rem; margin-top: 2.5rem;">Guntur Andi Supian</h1>
+            <p class="fade-up" style="font-size: 0.9rem;">Putra dari Bapak Ruslam (Alm) & Ibu Bese</p>
+            <h1 class="fade-up" style="font-family: 'BridenGroom'; font-size: 4.5rem; margin-top: -1rem;">&</h1>
+            <h1 class="fade-up" style="font-family: 'BridenGroom'; font-size: 2rem; margin-top: -0.8rem;">Radina Hanifah</h1>
+            <p class="fade-up" style="font-size: 0.9rem;">Putri dari Bapak Edi Wahyudi & Ibu Hakimah</p>
+            <br><br><br><br>
+            <p class="fade-up quran-verse" style="font-size: 1rem;">Q.S AR-RUM : 21</p>
+            <p class="fade-up verse-text" style="font-size: 0.8rem;">"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
+            <br>
+        </main>
+    </section>
+
+    <!-- Section: Save The Date -->
+    <section id="save-date" class="image-section">
+        <main class="text-center container">
+            <img src="img/minang 1.png" alt="Minang Decoration" class="img-fluid mx-auto d-block mb-4 fade-up" style="max-width: 8rem; margin-top: -2rem;">
+            <h1 class="fade-up" style="font-family: 'BridenGroom'; font-size: 2rem; margin-top: -2.5rem; margin-bottom: 2rem;">Save The Date</h1>
+            <div class="my-countdown simply-countdown fade-up"></div>
+            <div class="rounded-box mt-4 row fade-up">
+                <p class="fade-up" style="font-size: 0.6rem; color: white; font-size: 1.1rem;">Sabtu, 18 Januari 2025</p>
+                <div class="column col-12 col-md-6">
+                    <h4 class="fade-up" style="font-family: 'CommonText'; font-size: 1.1rem; color: white;">AKAD NIKAH</h4>
+                    <p class="fade-up" style="font-size: 0.8rem; color: white;">Pukul: 09.00 WITA</p>
+                </div>
+                <div class="column col-12 col-md-6">
+                    <h4 class="fade-up" style="font-family: 'CommonText'; font-size: 1.1rem; color: white;">RESEPSI</h4>
+                    <p class="fade-up" style="font-size: 0.8rem; color: white;">Pukul: 10.00 WITA</p>
+                </div>
+            </div>
+            <br>
+            <p>Bertempat di</p>
+            <p>Perumahan Renteng Agung, Praya, Lombok Tengah</p>
+            <a href="https://maps.app.goo.gl/StiGb1ovkvQdEuPC8" class="btn btn-success mt-2 fade-up" target="_blank">Buka Google Maps</a>
+            <br><br><br><br><br><br><br><br>
+        </main>
+    </section>
+
+    <!-- Section: Wedding gift -->
+    <section id="wedding-gift" class="image-section">
+        <main class="text-center container">
+            <br><br><br><br>
+            <h1 class="mt-5 fade-up" style="font-family: 'BridenGroom';">Wedding Gift</h1>
+            <p class="fade-up" style="font-size: 0.9rem;">Doa restu anda merupakan karunia yang sangat berarti bagi kami. Jika memberi adalah ungkapan tanda kasih, anda dapat memberi kado secara cashless.</p>
+            <img src="img/seabank.png" alt="Seabank Logo" class="img-fluid mx-auto d-block fade-up" style="max-width: 13rem; margin-top: -2rem;">
+            <button id="copy-rekening-btn" class="btn btn-success fade-up">Copy Nomor Rekening</button>
+            <br><br><br><br><br>
+
+        </main>
+    </section>
+
+    <!-- Section: Guests -->
+    <section id="guests" class="image-section">
+        <main class="container text-center">
+            <h1 class="fade-up" style="font-family: 'BridenGroom';">Turut Mengundang</h1>
+            <p class="fade-up" style="font-size: 1rem; margin-top: 2rem;">Suwardi S.IP</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Kepala Desa Bukit Damai</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Baharuddin S.E</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Kepala Desa Maluk</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Ahmadi Mahmudi</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Kepala Desa Pasir Putih</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Jhon Rayes S.Ap</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Ketua LATS Kecamatan Maluk</p>
+
+            <p class="fade-up" style="font-size: 1rem;">H. Iskandar S.Ap</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Tokoh Masyarakat Maluk</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Syamsul Hidayat S.E</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Ketua KNPI Kecamatan Maluk</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Jhuldy Arman Pratama A.Md.T</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Ketua Forum Pemuda Maluk</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Nur Adam Sahid</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Ketua karang taruna Bukit Damai</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Sigit Ardiansyah S.T</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Ketua Karang Taruna Pasir Putih</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Syam Majid</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Tokoh Masyarakat Maluk</p>
+
+            <p class="fade-up" style="font-size: 1rem;">H. Abu</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Alim Ulama Maluk</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Ilham Lahiya</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem; margin-bottom: -1.8rem;">BPD Desa Bukit Damai</p>
+            <br><br><br><br>
+        </main>
+    </section>
+
+    <section id="guests2" class="image-section">
+        <main class="container text-center">
+            <br><br>
+            <h1 class="fade-up" style="font-family: 'BridenGroom';">Turut Mengundang</h1>
+            <p class="fade-up" style="font-size: 1rem; margin-top: 2rem;">Syafaruddin & Yasnita</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Keluarga Mempelai</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Zazuli & Nurlis</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Keluarga Mempelai</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Ismed Iskandar & Yarlis</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Keluarga Mempelai</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Zulhendra & Tikayanti</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Keluarga Mempelai</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Riky</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Keluarga Mempelai</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Uda Rizal & Uni Putu</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Penasehat IKMTS Maluk</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Jony Sujambak</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Bendahara IKMTS Maluk</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Pendi Pradana</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">Kaling Renteng</p>
+
+            <p class="fade-up" style="font-size: 1rem;">Iwan</p>
+            <p class="fade-up" style="font-size: 0.5rem; font-style: italic; margin-top: -0.8rem;">RT Renteng</p>
+            <br><br><br>
+        </main>
+    </section>
+
+    <!-- Section: Wedding Wish -->
+    <section id="wedding-wish" class="image-section">
+        <main class="container text-center">
+            <h1 class="fade-up" style="font-family: 'BridenGroom'; margin-top: 3rem;">Wedding Wish</h1>
+            <p class="fade-up" style="font-size: 1rem;">Kirimkan doa & ucapan untuk kedua mempelai</p>
+            
+            <a id="send-wish-btn" class="btn btn-success fade-up">Kirim Ucapan</a>
+            <br><br><br><br><br><br><br><br>
+            <p class="fade-up">Menjadi sebuah kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dalam hari bahagia ini. Terima kasih atas segala ucapan, doa, dan perhatian yang diberikan.</p>
+            <p class="fade-up">See You On Our Wedding Day!</p>
+            
+        </main>
+    </section>
+
+    <section id="ucapan" class="image-section">
+        <h1 style="font-family: 'BridenGroom'; margin-top: 3rem;">Ucapan Pernikahan</h1>
+        <div class="comment-section" id="comment-list" style="margin-top: 2rem;"></div>
+    </section>
+
+    <script>
+        function loadComments() {
+            let comments = JSON.parse(localStorage.getItem("wedding-comments")) || [];
+            let commentSection = document.getElementById("comment-list");
+            commentSection.innerHTML = "";
+
+            if (comments.length === 0) {
+                commentSection.innerHTML = "<p>Belum ada ucapan.</p>";
+                return;
+            }
+
+            comments.forEach((comment) => {
+                let commentElement = document.createElement("div");
+                commentElement.classList.add("comment-box");
+                commentElement.innerHTML = `<p><strong>${comment.name}:</strong> ${comment.message}</p>`;
+                commentSection.appendChild(commentElement);
+            });
+        }
+
+        // Tampilkan ucapan saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", loadComments);
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        simplyCountdown('.my-countdown', {
+            year: 2025, 
+            month: 1, 
+            day: 18, 
+            hours: 0, 
+            minutes: 0, 
+            seconds: 0, 
+            words: { 
+                days: { root: 'Hari', lambda: (root, n) => n > 1 ? root + '' : root },
+                hours: { root: 'Jam', lambda: (root, n) => n > 1 ? root + '' : root },
+                minutes: { root: 'Menit', lambda: (root, n) => n > 1 ? root + '' : root },
+                seconds: { root: 'Detik', lambda: (root, n) => n > 1 ? root + '' : root }
+            },
+            onEnd: () => {},
+            onStop: () => {},
+            onResume: () => {},
+            onUpdate: (params) => {}
+        });
+
+        // Function to trigger visibility of elements on scroll
+        const fadeUpElements = document.querySelectorAll('.fade-up');
+        const fadeInOnScroll = () => {
+            fadeUpElements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll); // Also trigger on page load
+        document.getElementById("view-invitation-btn").addEventListener("click", () => {
+            document.body.classList.remove("locked"); // Unlock scrolling and navigation
+            document.getElementById("song").play(); // Play music when the button is clicked
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const nama = urlParams.get('nama') || '';
+        const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+        const namaContainer = document.querySelector('#landing-page p span');
+        namaContainer.innerText = `${pronoun} ${nama}`;
+
+        function copyRekening() {
+        const rekening = "901266723170"; // Ganti dengan nomor rekening yang benar
+        const tempInput = document.createElement("input");
+        tempInput.value = rekening;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        // SweetAlert2 - Notifikasi setelah berhasil menyalin
+        Swal.fire({
+        title: "Berhasil Disalin!",
+        text: `Nomor Rekening: ${rekening}`,
+        icon: "success",
+        confirmButtonText: "OK",
+        timer: 3000, // Alert akan otomatis hilang setelah 3 detik
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+            });
+        }
+
+        // Tambahkan event listener ke tombol
+        document.getElementById("copy-rekening-btn").addEventListener("click", copyRekening);
+        
+        document.querySelector("#send-wish-btn").addEventListener("click", function () {
+        Swal.fire({
+        title: "Kirim Ucapan",
+        html:
+            '<input id="swal-input-name" class="swal2-input" placeholder="Nama Anda">' +
+            '<textarea id="swal-input-message" class="swal2-textarea" placeholder="Tulis ucapan Anda di sini..."></textarea>',
+        focusConfirm: false,
+        showCancelButton: true,
+        confirmButtonText: "Kirim",
+        cancelButtonText: "Batal",
+        preConfirm: () => {
+            const name = document.getElementById("swal-input-name").value.trim();
+            const message = document.getElementById("swal-input-message").value.trim();
+            
+            if (!name || !message) {
+                Swal.showValidationMessage("Nama dan ucapan tidak boleh kosong!");
+            }
+            return { name, message };
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            saveComment(result.value.name, result.value.message);
+            Swal.fire("Berhasil!", "Ucapan Anda telah dikirim.", "success");
+        }
+    });
+});
+
+        function saveComment(name, message) {
+            let comments = JSON.parse(localStorage.getItem("wedding-comments")) || [];
+            comments.push({ name, message });
+            localStorage.setItem("wedding-comments", JSON.stringify(comments));
+}
+
+    </script>
+
+</body>
+</html>
