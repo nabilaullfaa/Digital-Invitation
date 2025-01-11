@@ -230,7 +230,6 @@ img {
 
 @media (max-width: 600px) {
     .container {
-        margin-top: 120px; /* Memberikan lebih banyak ruang pada layar kecil */
         padding: 10px;
     }
 
